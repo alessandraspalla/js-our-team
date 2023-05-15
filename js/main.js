@@ -43,13 +43,14 @@ console.log(ourTeam);
 const member = document.getElementById('container');
 
     for (let i = 0; i < ourTeam.length; i++){
-
         let memberTeam = ourTeam[i];
 
-        for (let chiaveMember in memberTeam) {
-            member.innerHTML += memberTeam[chiaveMember];
-        }
-        //MILESTONE 3
-        member.innerHTML += `<img src="../img/${memberTeam.foto}">`
+        const elCard = `<div class="card">
+                        <img src="img/${memberTeam.foto}">
+                        <h2 class="team-name">${memberTeam.nome}</h2>
+                        <span class="team-role">${memberTeam.ruolo}</span>
+                        </div>`
+
+        member.innerHTML += elCard;
     }
 		
